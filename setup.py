@@ -18,7 +18,7 @@ setup(
     ],
     setup_requires=['pytest-runner'],
     tests_require=['pytest'],
-    keywords=['python', 'finance', 'quant', 'market profile', 'volume profile']
+    keywords=['python', 'finance', 'quant', 'market profile', 'volume profile'],
     classifiers=[
         # complete classifier list: http://pypi.python.org/pypi?%3Aaction=list_classifiers
         'Development Status :: 3 - Alpha',
