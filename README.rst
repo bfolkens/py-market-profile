@@ -16,7 +16,7 @@ Installation
 
 ::
 
-    pip install market-profile
+    pip install marketprofile
 
 Documentation
 =============
