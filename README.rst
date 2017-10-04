@@ -6,9 +6,8 @@ Overview
     :alt: Travis-CI Build Status
     :target: https://travis-ci.org/bfolkens/py-market-profile
 
-.. end-badges
+A library to calculate Market Profile (Volume Profile) from a Pandas DataFrame.  This library expects the DataFrame to have an index of ``timestamp`` and columns for each of the OHLCV values.
 
-A library to calculate Market Profile from a Pandas DataFrame.
 
 * Free software: BSD license
 
@@ -22,7 +21,7 @@ Installation
 Documentation
 =============
 
-https://py-market-profile.readthedocs.io/
+(Coming soon)
 
 Development
 ===========
