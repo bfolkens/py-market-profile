@@ -9,7 +9,7 @@ matrix:
   include:
     - python: '2.7'
       env:
-        - TOXENV=py27,report
+        - TOXENV=py27
 before_install:
   - python --version
   - uname -a
