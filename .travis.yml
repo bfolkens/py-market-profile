@@ -1,0 +1,34 @@
+language: python
+sudo: false
+cache: pip
+env:
+  global:
+    - LD_PRELOAD=/lib/x86_64-linux-gnu/libSegFault.so
+    - SEGFAULT_SIGNALS=all
+  matrix:
+    - TOXENV=check
+    - TOXENV=docs
+matrix:
+  include:
+    - python: '2.7'
+      env:
+        - TOXENV=py27,report
+before_install:
+  - python --version
+  - uname -a
+  - lsb_release -a
+install:
+  - pip install tox
+  - virtualenv --version
+  - easy_install --version
+  - pip --version
+  - tox --version
+script:
+  - tox -v
+after_failure:
+  - more .tox/log/* | cat
+  - more .tox/*/log/* | cat
+notifications:
+  email:
+    on_success: never
+    on_failure: always

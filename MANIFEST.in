@@ -1,0 +1,8 @@
+graft src
+graft tests
+
+include LICENSE
+include README.rst
+include CONTRIBUTING.rst
+
+include .travis.yml
