@@ -23,6 +23,8 @@ Documentation
 
 (Coming soon)
 
+What is `Market Profile <http://eminimind.com/the-ultimate-guide-to-market-profile/>`_ and `How are these calculated <https://www.sierrachart.com/index.php?page=doc/StudiesReference/TimePriceOpportunityCharts.html#Calculations>`_?
+
 Development
 ===========
 
