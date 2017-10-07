@@ -21,7 +21,7 @@ Installation
 Example
 =======
 
-You can view a Jupyter notebook of an example here: `<examples/example.ipynb>`
+You can view a Jupyter notebook of an example here: `<examples/example.ipynb>`_
 
 Documentation
 =============
