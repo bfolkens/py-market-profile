@@ -18,6 +18,11 @@ Installation
 
     pip install marketprofile
 
+Example
+=======
+
+You can view a Jupyter notebook of an example here: `<examples/example.ipynb>`
+
 Documentation
 =============
 
