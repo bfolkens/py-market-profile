@@ -3,7 +3,7 @@ from setuptools import find_packages
 
 setup(
     name='MarketProfile',
-    version='0.1.0',
+    version='0.1.1',
     author='Brad Folkens',
     author_email='bfolkens@gmail.com',
     packages=find_packages(where="src"),
@@ -14,7 +14,7 @@ setup(
     long_description=open('README.rst').read(),
     install_requires=[
         "numpy >= 1.13.0",
-        "pandas == 0.19.2",
+        "pandas >= 0.19.2",
     ],
     setup_requires=['pytest-runner'],
     tests_require=['pytest'],
