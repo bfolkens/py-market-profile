@@ -89,17 +89,25 @@ class MarketProfileSlice(object):
     # Calculate the market profile distribution (histogram)
     # http://eminimind.com/the-ultimate-guide-to-market-profile/
     def build_profile(self):
+        rounded_set = self.ds['Close'].apply(lambda x: self.mp.round_to_row(x))
+
         if self.mp.mode == 'tpo':
-            self.profile = self.ds.groupby(self.ds['Close'].apply(lambda x: self.mp.round_to_row(x)))['Close'].count()
+            self.profile = self.ds.groupby(rounded_set)['Close'].count()
         elif self.mp.mode == 'vol':
-            self.profile = self.ds.groupby(self.ds['Close'].apply(lambda x: self.mp.round_to_row(x)))['Volume'].sum()
+            self.profile = self.ds.groupby(rounded_set)['Volume'].sum()
         else:
-            raise ValueError("Unrecognized mode: %s", self.mp.mode)
+            raise ValueError("Unrecognized mode: %s" % self.mp.mode)
 
         self.total_volume = self.profile.sum()
-        self.poc_idx = midmax_idx(self.profile)
-        self.poc_volume = self.profile.iloc[self.poc_idx]
-        self.poc_price = self.profile.index[self.poc_idx]
         self.profile_range = self.profile.index.min(), self.profile.index.max()
-        self.value_area = self.calculate_value_area()
-        self.balanced_target = self.calculate_balanced_target()
+        self.poc_idx = midmax_idx(self.profile.values.tolist())
+        if self.poc_idx:
+            self.poc_volume = self.profile.iloc[self.poc_idx]
+            self.poc_price = self.profile.index[self.poc_idx]
+            self.value_area = self.calculate_value_area()
+            self.balanced_target = self.calculate_balanced_target()
+        else:
+            self.poc_volume = None
+            self.poc_price = None
+            self.value_area = None
+            self.balanced_target = None
