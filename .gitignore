@@ -4,4 +4,5 @@ __pycache__
 .tox
 *.egg-*
 *.pyc
+dist/
 examples/google.txt
