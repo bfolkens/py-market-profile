@@ -10,7 +10,7 @@ class MarketProfileTest(object):
             open('tests/fixtures/google.csv', 'r'),
             index_col=['Timestamp'],
             parse_dates=['Timestamp'],
-            date_parser=pd.tseries.tools.to_datetime
+            date_parser=pd.to_datetime
         )
         return MarketProfile(df, row_size=0.05)
 
