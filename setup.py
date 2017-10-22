@@ -14,7 +14,7 @@ setup(
     long_description=open('README.rst').read(),
     install_requires=[
         "numpy >= 1.13.0",
-        "pandas >= 0.19.2",
+        "pandas >= 0.20.3",
     ],
     setup_requires=['pytest-runner'],
     tests_require=['pytest'],
