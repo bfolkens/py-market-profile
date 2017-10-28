@@ -38,3 +38,6 @@ class MarketProfileTest(object):
         assert 961.25 == round(market_profile_slice.balanced_target, 2)
         assert [927.75, 959.30] == [round(val, 2) for val in market_profile_slice.profile_range]
         assert [944.20, 958.95] == [round(val, 2) for val in market_profile_slice.value_area]
+
+    def test_as_dict(self, market_profile_slice):
+        assert {'or_low': 927.74, 'or_high': 927.74, 'ib_low': 927.74, 'ib_high': 935.53, 'poc': 944.50, 'low': 927.75, 'high': 959.30, 'val': 944.20, 'vah': 958.95, 'bt': 961.25} == market_profile_slice.as_dict()

@@ -111,3 +111,22 @@ class MarketProfileSlice(object):
             self.poc_price = None
             self.value_area = None
             self.balanced_target = None
+
+    def as_dict(self):
+        ib_low, ib_high = self.initial_balance()
+        or_low, or_high = self.open_range()
+        profile_low, profile_high = self.profile_range
+        val, vah = self.value_area
+
+        return({
+            'or_low': or_low,
+            'or_high': or_high,
+            'ib_low': ib_low,
+            'ib_high': ib_high,
+            'poc': self.poc_price,
+            'low': profile_low,
+            'high': profile_high,
+            'val': val,
+            'vah': vah,
+            'bt': self.balanced_target
+        })
