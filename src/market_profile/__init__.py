@@ -3,7 +3,7 @@ __version__ = "0.1.0"
 import pandas as pd
 import numpy as np
 import math
-from utils import midmax_idx
+from .utils import midmax_idx
 
 
 class MarketProfile(object):
