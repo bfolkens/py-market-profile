@@ -64,10 +64,10 @@ class MarketProfileSlice(object):
             low_volume = self.profile.iloc[next_min_idx] if next_min_idx != last_min else None
             high_volume = self.profile.iloc[next_max_idx] if next_max_idx != last_max else None
 
-            if not high_volume or low_volume > high_volume:
+            if not high_volume or (low_volume and low_volume > high_volume):
                 trial_vol += low_volume
                 min_idx = next_min_idx
-            elif not low_volume or low_volume <= high_volume:
+            elif not low_volume or (high_volume and low_volume <= high_volume):
                 trial_vol += high_volume
                 max_idx = next_max_idx
             else:
@@ -101,7 +101,7 @@ class MarketProfileSlice(object):
         self.total_volume = self.profile.sum()
         self.profile_range = self.profile.index.min(), self.profile.index.max()
         self.poc_idx = midmax_idx(self.profile.values.tolist())
-        if self.poc_idx:
+        if self.poc_idx is not None:
             self.poc_volume = self.profile.iloc[self.poc_idx]
             self.poc_price = self.profile.index[self.poc_idx]
             self.value_area = self.calculate_value_area()
