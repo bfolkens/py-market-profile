@@ -24,7 +24,7 @@ class MarketProfile(object):
             raise TypeError("index must be int or slice")
 
     def round_to_row(self, x):
-        if np.isnan(x):
+        if np.isnan(np.float64(x)):
             return x
 
         roundoff = 1 / float(self.row_size)
