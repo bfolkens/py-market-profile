@@ -7,7 +7,7 @@ class MarketProfileTest(object):
     @pytest.fixture(autouse=True)
     def market_profile(self):
         df = pd.read_csv(
-            open('tests/fixtures/google.csv', 'r'),
+            'tests/fixtures/google.csv',
             index_col=['Timestamp'],
             parse_dates=['Timestamp'],
             date_parser=pd.to_datetime
