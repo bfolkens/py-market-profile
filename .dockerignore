@@ -1,5 +1,6 @@
-__pycache__
+.git
 .pytest_cache
+__pycache__
 .cache
 .ipynb_checkpoints
 .tox

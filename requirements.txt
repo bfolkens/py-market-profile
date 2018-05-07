@@ -1,0 +1,5 @@
+numpy>=1.13.0
+pandas>=0.20.3
+
+tox
+pytest
