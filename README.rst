@@ -21,7 +21,7 @@ Installation
 Example
 =======
 
-You can view a Jupyter notebook of an example here: `<examples/example.ipynb>`_
+You can view a Jupyter notebook of an example here: `<https://github.com/bfolkens/py-market-profile/blob/master/examples/example.ipynb>`_
 
 Documentation
 =============
