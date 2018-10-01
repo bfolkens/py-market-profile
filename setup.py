@@ -3,7 +3,7 @@ from setuptools import find_packages
 
 setup(
     name='MarketProfile',
-    version='0.1.4',
+    version='0.1.5',
     author='Brad Folkens',
     author_email='bfolkens@gmail.com',
     packages=find_packages(where="src"),

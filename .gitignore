@@ -8,3 +8,4 @@ __pycache__
 dist/
 examples/google.txt
 .eggs
+build/
