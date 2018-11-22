@@ -15,9 +15,8 @@ class MarketProfileTest(object):
         return MarketProfile(df, row_size=0.05)
 
     @pytest.fixture(autouse=True)
-    def market_profile_slice(self):
-        mp = self.market_profile()
-        return mp[mp.df.index.min():mp.df.index.max()]
+    def market_profile_slice(self, market_profile):
+        return market_profile[market_profile.df.index.min():market_profile.df.index.max()]
 
     def test_round_to_row(self, market_profile):
         assert 0.10 == market_profile.round_to_row(0.10)
