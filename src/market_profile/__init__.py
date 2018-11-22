@@ -109,7 +109,7 @@ class MarketProfileSlice(object):
         else:
             self.poc_volume = None
             self.poc_price = None
-            self.value_area = None
+            self.value_area = [None, None]
             self.balanced_target = None
 
     def as_dict(self):
