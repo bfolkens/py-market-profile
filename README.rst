@@ -30,6 +30,9 @@ Documentation
 
 What is `Market Profile <http://eminimind.com/the-ultimate-guide-to-market-profile/>`_ and `How are these calculated <https://www.sierrachart.com/index.php?page=doc/StudiesReference/TimePriceOpportunityCharts.html#Calculations>`_?
 
+A discussion on the difference between TPO (Time Price Opportunity) and VOL (Volume Profile) chart types:
+`<https://jimdaltontrading.com/tpo-vs-volume-profile>`_
+
 Development
 ===========
 
