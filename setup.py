@@ -1,9 +1,15 @@
 from setuptools import setup
 from setuptools import find_packages
 
+import os
+import sys
+sys.path.insert(0, os.path.abspath('./src'))
+
+from market_profile import __version__
+
 setup(
     name='MarketProfile',
-    version='0.1.6',
+    version=__version__,
     author='Brad Folkens',
     author_email='bfolkens@gmail.com',
     packages=find_packages(where="src"),
