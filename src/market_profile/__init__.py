@@ -3,6 +3,7 @@ __version__ = "0.1.0"
 import pandas as pd
 import numpy as np
 import math
+from scipy.signal import argrelextrema
 from .utils import midmax_idx
 
 
@@ -86,6 +87,10 @@ class MarketProfileSlice(object):
 
         return bt
 
+    def find_extrema(self, sign):
+        (extrema_idx,) = argrelextrema(self.profile.values, sign)
+        return self.profile.iloc[extrema_idx.tolist()]
+
     # Calculate the market profile distribution (histogram)
     # http://eminimind.com/the-ultimate-guide-to-market-profile/
     def build_profile(self):
@@ -112,6 +117,9 @@ class MarketProfileSlice(object):
             self.value_area = [None, None]
             self.balanced_target = None
 
+        self.low_value_nodes = self.find_extrema(np.less)
+        self.high_value_nodes = self.find_extrema(np.greater)
+
     def as_dict(self):
         ib_low, ib_high = self.initial_balance()
         or_low, or_high = self.open_range()
@@ -128,5 +136,7 @@ class MarketProfileSlice(object):
             'high': profile_high,
             'val': val,
             'vah': vah,
-            'bt': self.balanced_target
+            'bt': self.balanced_target,
+            'lvn': self.low_value_nodes,
+            'hvn': self.high_value_nodes
         })

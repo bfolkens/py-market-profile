@@ -39,4 +39,23 @@ class MarketProfileTest(object):
         assert [944.20, 958.95] == [round(val, 2) for val in market_profile_slice.value_area]
 
     def test_as_dict(self, market_profile_slice):
-        assert {'or_low': 927.74, 'or_high': 927.74, 'ib_low': 927.74, 'ib_high': 935.53, 'poc': 944.50, 'low': 927.75, 'high': 959.30, 'val': 944.20, 'vah': 958.95, 'bt': 961.25} == market_profile_slice.as_dict()
+        expected = {
+            'or_low': 927.74,
+            'or_high': 927.74,
+            'ib_low': 927.74,
+            'ib_high': 935.53,
+            'poc': 944.50,
+            'low': 927.75,
+            'high': 959.30,
+            'val': 944.20,
+            'vah': 958.95,
+            'bt': 961.25,
+        }
+
+        computed = market_profile_slice.as_dict()
+
+        for attr in ['or_low', 'or_high', 'ib_low', 'ib_high', 'poc', 'low', 'high', 'val', 'vah', 'bt']:
+            assert expected[attr] == computed[attr]
+
+        assert True == computed['lvn'].isin([13627, 30366]).any().any()
+        assert True == computed['hvn'].isin([186489, 238489]).any().any()
