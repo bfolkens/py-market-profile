@@ -15,6 +15,7 @@ setup(
     install_requires=[
         "numpy >= 1.13.0",
         "pandas >= 0.20.3",
+        "scipy >= 0.11.0"
     ],
     setup_requires=['pytest-runner'],
     tests_require=['pytest'],
