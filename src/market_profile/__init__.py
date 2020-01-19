@@ -1,5 +1,3 @@
-__version__ = "0.1.7"
-
 import pandas as pd
 import numpy as np
 import math

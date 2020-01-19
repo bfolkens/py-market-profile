@@ -2,14 +2,13 @@ from setuptools import setup
 from setuptools import find_packages
 
 import os
-import sys
-sys.path.insert(0, os.path.abspath('./src'))
 
-from market_profile import __version__
+with open('VERSION') as version_file:
+    version = version_file.read().strip()
 
 setup(
     name='MarketProfile',
-    version=__version__,
+    version=version,
     author='Brad Folkens',
     author_email='bfolkens@gmail.com',
     packages=find_packages(where="src"),

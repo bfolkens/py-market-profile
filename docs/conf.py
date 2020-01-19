@@ -4,7 +4,7 @@
 # list see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 
-import traceback
+import traceback, os, sys
 
 # -- Path setup --------------------------------------------------------------
 
@@ -12,11 +12,10 @@ import traceback
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-import os
-import sys
 sys.path.insert(0, os.path.abspath('../src'))
 
-from market_profile import __version__
+with open(os.path.join('..', 'VERSION')) as version_file:
+    release = version = version_file.read().strip()
 
 
 # -- Project information -----------------------------------------------------
@@ -25,13 +24,6 @@ project = 'Market Profile'
 year = '2018-2020'
 author = 'Brad Folkens'
 copyright = '{0}, {1}'.format(year, author)
-
-# The full version, including alpha/beta/rc tags
-try:
-    version = release = __version__
-except Exception:
-    traceback.print_exc()
-    version = release = '0.1.0'
 
 
 # -- General configuration ---------------------------------------------------
