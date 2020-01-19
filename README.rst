@@ -1,6 +1,6 @@
-========
+==============
 Market Profile
-========
+==============
 
 .. image:: https://travis-ci.org/bfolkens/py-market-profile.svg?branch=master
     :alt: Travis-CI Build Status
@@ -28,11 +28,10 @@ Example
 
 You can view a Jupyter notebook of an example with charts here: `<https://github.com/bfolkens/py-market-profile/blob/master/examples/example.ipynb>`_
 
-Basic usage:
+Pull in some data to play with:
 
    >>> from market_profile import MarketProfile
    >>> import pandas_datareader as data
-
    >>> amzn = data.get_data_yahoo('AMZN', '2019-12-01', '2019-12-31')
 
 Create the MarketProfile object from a Pandas DataFrame:
