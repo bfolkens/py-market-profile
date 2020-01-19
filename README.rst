@@ -2,7 +2,7 @@
 Market Profile
 ==============
 
-.. image:: https://travis-ci.org/bfolkens/py-market-profile.svg?branch=master
+.. image:: https://api.travis-ci.org/bfolkens/py-market-profile.svg?branch=master
     :alt: Travis-CI Build Status
     :target: https://travis-ci.org/bfolkens/py-market-profile
 
@@ -112,7 +112,7 @@ Documentation
 
 https://marketprofile.readthedocs.io/
 
-What is `Market Profile <http://eminimind.com/the-ultimate-guide-to-market-profile/>`_ and `How are these calculated <https://www.sierrachart.com/index.php?page=doc/StudiesReference/TimePriceOpportunityCharts.html#Calculations>`_?
+What is `Market Profile <https://eminimind.com/the-ultimate-guide-to-market-profile/>`_ and `How are these calculated <https://www.sierrachart.com/index.php?page=doc/StudiesReference/TimePriceOpportunityCharts.html#Calculations>`_?
 
 A discussion on the difference between TPO (Time Price Opportunity) and VOL (Volume Profile) chart types:
 `<https://jimdaltontrading.com/tpo-vs-volume-profile>`_
