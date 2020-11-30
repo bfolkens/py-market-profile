@@ -124,5 +124,5 @@ To run the all tests run::
 
     tox
 
-Development sponsored in part by Cignals, LLC. - Bitcoin `Order Flow and Footprint Charts <https://cignals.io/>`.
+Development sponsored in part by Cignals, LLC. - Bitcoin `Order Flow and Footprint Charts <https://cignals.io/>`_.
 
