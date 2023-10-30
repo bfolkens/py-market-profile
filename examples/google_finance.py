@@ -14,7 +14,7 @@ def get_google_data(file_path, symbol, interval, days):
     url = "http://finance.google.com/finance/getprices?q=%s&i=%d&p=%dd&f=d,o,h,l,c,v" % (symbol, interval, days)
     r = requests.get(url)
 
-    with open(file_path, 'w') as out:
+    with open(file_path, 'wb') as out:
         out.write(r.content)
 
 def read_google_data(file_path):
