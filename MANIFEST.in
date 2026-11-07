@@ -5,5 +5,3 @@ include LICENSE
 include README.rst
 include CONTRIBUTING.rst
 include VERSION
-
-include .travis.yml

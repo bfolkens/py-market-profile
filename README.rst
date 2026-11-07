@@ -2,9 +2,9 @@
 Market Profile
 ==============
 
-.. image:: https://api.travis-ci.org/bfolkens/py-market-profile.svg?branch=master
-    :alt: Travis-CI Build Status
-    :target: https://travis-ci.org/bfolkens/py-market-profile
+.. image:: https://github.com/bfolkens/py-market-profile/actions/workflows/ci.yml/badge.svg?branch=master&event=push
+    :alt: GitHub Actions CI status
+    :target: https://github.com/bfolkens/py-market-profile/actions/workflows/ci.yml
 
 .. image:: https://readthedocs.org/projects/marketprofile/badge/?version=latest
     :target: https://marketprofile.readthedocs.io/en/latest/?badge=latest
