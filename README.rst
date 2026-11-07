@@ -2,6 +2,8 @@
 Market Profile
 ==============
 
+.. badges-start
+
 .. image:: https://github.com/bfolkens/py-market-profile/actions/workflows/ci.yml/badge.svg?branch=master&event=push
     :alt: GitHub Actions CI status
     :target: https://github.com/bfolkens/py-market-profile/actions/workflows/ci.yml
@@ -10,6 +12,7 @@ Market Profile
     :target: https://marketprofile.readthedocs.io/en/latest/?badge=latest
     :alt: Documentation Status
 
+.. badges-end
 
 A library to calculate Market Profile (Volume Profile) from a Pandas DataFrame.  This library expects the DataFrame to have an index of ``timestamp`` and columns for each of the OHLCV values.
 
