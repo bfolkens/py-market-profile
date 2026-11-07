@@ -124,5 +124,11 @@ To run the all tests run::
 
     tox
 
+With Nix, run these commands from the repository root to build the package
+and run the tests against your checkout::
+
+    nix build
+    nix develop -c python -m pytest
+
 Development sponsored in part by Cignals, LLC. - Bitcoin `Order Flow and Footprint Charts <https://cignals.io/>`_.
 

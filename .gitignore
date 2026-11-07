@@ -10,3 +10,4 @@ examples/google.txt
 .eggs
 build/
 docs/_build
+result
